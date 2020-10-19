@@ -3,6 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <memory>
 #include <iostream>
 
 class View {
@@ -16,6 +17,7 @@ class View {
         View();
         int init();
         SDL_Texture * loadTexture(char * asset_path);
+        void renderPlayer(SDL_Texture * texture, SDL_Rect collision_rect);
         ~View();
 };
 

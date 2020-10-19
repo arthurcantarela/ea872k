@@ -43,6 +43,12 @@ SDL_Texture * View::loadTexture(char * asset) {
     return texture;
 }
 
+void View::renderPlayer(SDL_Texture * texture, SDL_Rect collision_rect) {
+    SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, texture, nullptr, &collision_rect);
+    SDL_RenderPresent(renderer);
+}
+
 View::~View() {
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);

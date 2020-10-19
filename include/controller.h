@@ -12,10 +12,10 @@ class Controller {
         bool running = false;
     public:
         Controller();
-        ~Controller();
-        bool isRunning();
         int init();
+        bool isRunning();
         int play();
+        void handleKeyboard();
 };
 
 #endif
